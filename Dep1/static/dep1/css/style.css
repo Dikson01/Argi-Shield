@@ -1,0 +1,144 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fdf9;
+  color: #333;
+}
+
+/* Wrapper & Container */
+.wrapper,
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+header {
+  background-color: #2e7d32;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;  /* vertical center */
+  justify-content: center; /* center horizontally */
+  gap: 15px;  /* spacing between logo and text */
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Section */
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Home Page Sections */
+.intro,
+.about,
+.why-choose {
+  margin-bottom: 40px;
+}
+
+.intro img.banner {
+  max-width: 100%;
+  height: auto;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+.about ul,
+.why-choose ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.about ul li,
+.why-choose ul li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* Products Page */
+.product-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: #2e7d32;
+  margin-bottom: 25px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.product {
+  background-color: #ffffff;
+  border: 1px solid #cce5cc;
+  border-radius: 10px;
+  width: 220px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product:hover {
+  transform: scale(1.03);
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.product h3 {
+  margin-bottom: 8px;
+  color: #2e7d32;
+}
+
+.product p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Footer */
+footer {
+  background-color: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: auto;
+}
