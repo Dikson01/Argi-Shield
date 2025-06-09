@@ -12,8 +12,8 @@
       <img src="{% static 'dep1/images/logo1.jpg' %}" alt="Factory Logo" class="logo">
       <h1>Pesticide Factory Store</h1>
       <nav>
-        <a href="index.html">Home</a>
-        <a href="product.html">Products</a>
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'product' %}">Products</a>
         <a href="#">Contact</a>
       </nav>
     </header>

@@ -13,8 +13,8 @@
       <img src="{% static 'dep1/images/logo1.jpg' %}" alt="Factory Logo" class="logo">
       <h1>Pesticide Factory Store</h1>
       <nav>
-        <a href="index.html">Home</a>
-        <a href="products.html">Products</a>
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'product' %}">Products</a>
         <a href="#">Contact</a>
       </nav>
     </header>
@@ -26,13 +26,19 @@
         <div class="product">
           <img src="{% static 'dep1/images/Product2.jpg' %}" alt="Pesticide A">
           <h3>Pesticide A</h3>
-          <p>Effective against aphids and other common pests. ₹350</p>
+          <p>Effective against aphids and other common pests. <br>
+            Stock: 5<br>
+            Price: ₹350</p>
         </div>
 
         <div class="product">
           <img src="{% static 'dep1/images/product1.jpg' %}" alt="Pesticide B">
-          <h3>Pesticide B</h3>
-          <p>Organic pesticide for vegetable crops. ₹450</p>
+          {% for p in products %}
+          <h3>{{p.name}}</h3>
+          <p>Organic pesticide for vegetable crops.<br> 
+            Stock: {{p.stock}}<br>
+            Price: {{p.price}}</p>
+          {% endfor %}
         </div>
       </section>
     </main>
